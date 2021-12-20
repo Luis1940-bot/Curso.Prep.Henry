@@ -1,0 +1,60 @@
+Variables:
+Es una forma de almacenar un valor para ser utilizado  más tarde. Declaramos una variable con un nombre que la identifica y va a ir tomando distintos valores
+que luego serán utilizados.
+Existen tres tipos de variables a ser declaradas var, let y const. Tanto var como let pueden usarse indistintamente con alguna pequeña diferencia. Const se 
+usa para declarar una constante.
+
+Strings: 
+A una variable puede utilizarse para almacenar varios tipos de datos, strings, numbers y booleans. El tipo de dato srtings se utiliza para almacenar
+caracteres alfanuméricos o bloques de  texto, siempre dentro de comillas.
+  var nombrePerro = 'firulais';
+
+Funciones (argumentos, `return`):
+Las funciones son muy utilizadas en Javascript y son un tipo de objeto llamado callable objet u objetos invocables. En definitiva son objetos que se definen y van a utilizarse cada vez 
+que sea necesario.
+Las funciones comienzan con la palabra Function y tiene una estructura que sigue con un par de paréntesis () donde se pasan argumentos y la función comienza con una llave abierta { y 
+finaliza con el cierre de una llave }. 
+  function logHola() {
+      console.log('hola!');
+  }
+
+  logHola();
+
+
+Argumentos: los argumentos son la manera que tenemos, al momento de invocar una función, de pasarle algún tipo de datos. Posteriormente la función operará con el argumento pasado.
+Los argumentos pueden ser datos o variables. Estos pueden ser la cantidad que sea necesario.
+Return: La función puede realizar varias operaciones pero también puede devolvernos algún tipo de resultado para lo que se utiliza la palabra reservada return.
+  function sumarDosNumeros(a, b) {
+    var suma = a + b;
+    return suma;
+  
+
+  sumarDosNumeros(1, 5); // 6
+
+  Declaraciones `if`:
+  Las declaraciones if son utilizadas para controlar el flujo del programa (control flow) realizando comparaciones a través de comparadores lógicos. Los comparadores lógicos son 
+  <, <=, >, > =, ===, ! == (menor que, menor igual que, mayor que, mayor igual que, estrictamente igual, estrictamente distinto). Al momento de realizar la comparación
+  la declaración if nos responde con un true, si se cumple la comparación, o un false si no se cumple.
+    function puedeManejar(edad) {
+      if (edad > 18) {
+          return true;
+      }
+
+      return false;
+  }
+
+  puedeManejar(22); // true
+
+Valores booleanos (`true`, `false`):
+Los booleanos  provienen de la logíca de Boole, están basado  en una codificación binaria  0 y 1, encendido o apagado, verdadero o falso, true o false.
+Esencialmente significa que siempre vamos a tener dos opciones.
+
+
+
+
+
+
+
+
+
+
