@@ -296,14 +296,16 @@ function esVocal(letra) {
   var vocal = "";
   var mensaje = "";
   if ((letra.length = 1)) {
-    vocal = str.toLowerCase();
+    vocal = letra.toLowerCase();
 
-    if (letra.cha) {
+    if (vocal.match(/a/g).length == 1) {
+      ///es vocal
+      mensaje = "Es vocal";
     }
   } else {
-    mensaje = "Dato incorrecto.";
-    return mensaje;
+    mensaje = "Dato incorrecto";
   }
+  return mensaje;
 }
 
 // No modificar nada debajo de esta línea
