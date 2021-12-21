@@ -307,6 +307,7 @@ function esVocal(letra) {
   }
   return mensaje;
 }
+esVocal("a"); //“Es vocal”
 
 // No modificar nada debajo de esta línea
 // --------------------------------
