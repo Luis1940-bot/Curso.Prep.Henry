@@ -16,7 +16,7 @@ const nuevaResta = 10 - 5 === 5;
 const nuevaMultiplicacion = 10 * 4 === 40;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 4;
+const nuevoModulo = 21 % 5 === 1;
 
 // En los próximos 22 problemas, deberás completar la función.
 // Todo tu código irá dentro de las llaves de la función.
@@ -27,10 +27,10 @@ const nuevoModulo = 21 % 5 === 4;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  var saludo = str + " es buen estudiante.";
-  return saludo;
+
+  return str;
 }
-devolverString("Luis"); //Luis es buen estudiante.
+devolverString("Luis"); //Luis.
 
 function suma(x, y) {
   // "x" e "y" son números
@@ -115,13 +115,15 @@ function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  var resultado;
+  var resultado = true;
   if (num > 50) {
     resultado = true;
   } else {
-    resultado = fase;
+    resultado = false;
   }
+  return resultado;
 }
+mayorQueCincuenta(125); //true
 
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
@@ -137,7 +139,8 @@ function esPar(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   var par;
-  var auxiliar = (num % 2) * 2;
+  var auxiliar = num / 2;
+  auxiliar = Math.trunc(auxiliar) * 2;
   if (num == auxiliar) {
     par = true;
   } else {
@@ -152,7 +155,8 @@ function esImpar(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   var impar;
-  var auxiliar = (num % 2) * 2;
+  var auxiliar = num / 2;
+  auxiliar = Math.trunc(auxiliar) * 2;
   if (num == auxiliar) {
     impar = false;
   } else {
@@ -217,16 +221,16 @@ function esPositivo(numero) {
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
   var resultado = "";
-  if (numero >= 0) {
+  if (Math.sign(numero) === 1) {
     resultado = "Es positivo";
-  } else if (numero < 0) {
+  } else if (Math.sign(numero) === -1) {
     resultado = "Es negativo";
   } else if (numero == 0) {
-    resultado = "Es positivo";
+    resultado = false;
   }
   return resultado;
 }
-esPositivo(-3); //Es negativo
+esPositivo(3); //Es positivo
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
@@ -277,14 +281,15 @@ function areaDelTriangulo(base, altura) {
   var triangulo = (base * altura) / 2;
   return triangulo;
 }
-areaDelTriangulo(3, 4), //6
-  function deEuroAdolar(euro) {
-    //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
-    //como parámetro un número de euros y calcule el cambio en dólares.
-    //Escribe tu código aquí
-    var cambio = euro * 1.2;
-    return cambio;
-  };
+areaDelTriangulo(3, 4); //6
+
+function deEuroAdolar(euro) {
+  //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
+  //como parámetro un número de euros y calcule el cambio en dólares.
+  //Escribe tu código aquí
+  var cambio = euro * 1.2;
+  return cambio;
+}
 deEuroAdolar(3); //3.6
 
 function esVocal(letra) {
@@ -295,12 +300,15 @@ function esVocal(letra) {
   //Escribe tu código aquí
   var vocal = "";
   var mensaje = "";
-  if ((letra.length = 1)) {
+  if (letra.length == 1) {
     vocal = letra.toLowerCase();
-
-    if (vocal.match(/a/g).length == 1) {
+    const arreglo = ["a", "e", "i", "o", "u"];
+    //vocal.match(/[aeiou]/g)[0] == letra
+    if (arreglo.indexOf(vocal) != -1) {
       ///es vocal
       mensaje = "Es vocal";
+    } else {
+      mensaje = "Dato incorrecto";
     }
   } else {
     mensaje = "Dato incorrecto";
