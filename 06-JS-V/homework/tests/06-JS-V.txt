@@ -1,0 +1,12 @@
+* `prototype`
+Se utiliza cuando necesitamos un método o una propiedad que no fue construida en esta clase pero si en una clase superior,
+utilizamos NOMBRE_DE_LA_CLASE_PRINCIPAL.prototype.NOMBRE_METODO_NUEVO
+
+
+* _Constructors_ (de Clases)
+El constructor se utiliza para poder declarar métodos, eventos, propiedad dentro de una clase.
+
+
+
+
+
