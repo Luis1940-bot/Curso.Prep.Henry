@@ -1,0 +1,23 @@
+* `for`
+Se utiliza para hacer un loop que nos permita iterar entre ciertos valores. Este loop puede servir para generar un dato o para recorrer un arreglo, por ejemplo.
+
+ejemplo:
+for(var i=0;i<100;i++){
+  return i;
+}//devolverá los 100 valores que tomara la variable i, desde 0 a 99;
+
+for(var i=0;i<array.length;i++){
+  return array[i];
+}//devolverá los todos los valores que contenga el arreglo array desde 0 hasta su máximo, dado por length.
+
+
+
+* `&&`, `||`, `!`
+Representan  los operadores lógicos &&: AND, ||: OR y !:NOT. Son utilizados entre otras cosas en el control de flujo de un proceso en combinación
+con la instrucción IF.
+
+if(nublado=true || lluvia=true){
+  fiets=false;
+}else{
+  fiesta=true;
+}
