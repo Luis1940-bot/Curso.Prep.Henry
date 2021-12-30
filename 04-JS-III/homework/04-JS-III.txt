@@ -1,0 +1,13 @@
+	* Arrays
+
+  Conocido también como arreglo es una clase de objeto que nos permite almacenar cualquier tipo de datos para luego poder leerlos.
+  Se asigna valores a través de la identificación de un índice y se lee de la  misma forma. Estos índices comienzan a enumerarse desde el 0.
+  Estos arrays nos permite construir una matriz, pudiendo ser de una dimensión, bidimensionales o multidimensional.
+
+  ejemplo:
+  var nombres = ["Luis", "Thiago","Viviana"];
+  return nombres[1];//Thiago
+  return nombres[0];//Luis
+
+  nombres[0]="Mario";
+  return nombres;//["Mario","Thiago","Viviana"]
