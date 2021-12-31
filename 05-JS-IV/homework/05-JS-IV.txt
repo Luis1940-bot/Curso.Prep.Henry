@@ -1,0 +1,77 @@
+	* Objetos
+  Los objetos son contenedores de datos que pueden tener mucha información de una sola cosa.
+const obj = {};
+  Los objetos son una especie de array o matriz, en donde se acceden a los datos por un par clave de (key:value), en realidad un arreglo es un objeto donde
+  el key es el número de órden o índice y el value es el valor que en esa posición se encuentra.
+
+ejemplo:
+const user = {
+    username: 'juan.perez',
+    password: 'loremipsumpwd123',
+    lovesJavascript: true,
+    favoriteNumber: 42
+};
+
+	* Propiedades
+  Las propiedades son todos los elementos que podemos declarar dentro de estos objetos y nos posibilitarán acceder a ellos al invocar estos objetos desde cualquier
+  sitio. 
+  Acceder a ellos puede hacerse con notación de punto o con corchetes. Pueden ser con valores literales o puede pasarse un valor a través de los argumentos del objeto.
+
+  ejemplo:
+const passString = 'password';
+user['lovesJavascript']; // true
+user['username'];        // juan.perez
+user[passString];        // loremipsumpwd123
+
+
+	* Métodos
+  Los métodos o funciones son elementos declarados dentro de los objetos que nos permiten realizar algún tipo de acción. También se accede a ellos  invocándolos a través del objeto
+  donde fueron creados.
+
+  ejemplo:
+  const nuevoObjeto = {
+    decirHola: function() {
+        console.log('Hola a todo el mundo!');
+    }
+}
+
+nuevoObjeto.decirHola(); //Hola a todo el mundo!
+
+
+
+	* Bucle `for…in`
+  Este es un bucle for.....in loop y nos permite iterar entre los  elementos que fueron declarados dentro del objeto, accediendo a los valores guardados hasta llegar al último elemento.
+
+  ejemplo:
+  const usuario = {
+    username: 'juan.perez',
+    password: 'loremipsumpwd123',
+    lovesJavascript: true,
+    favoriteNumber: 42
+};
+
+for (let clave in usuario){
+    console.log(clave);
+    console.log(usuario[clave]);
+}
+
+// username
+// 'juan.perez'
+// password
+// 'loremipsumpwd123'
+// lovesJavascript
+// true
+// favoriteNumber
+// 42
+
+	* Notación de puntos vs notación de corchetes
+  Son dos formas diferentes que los objetos nos permiten para asignar o recuperar el valor que en ellos está guardado. las formas de escritura son:
+  user.username;        // juan.perez NOTACIÓN DE PUNTOS
+  user['username'];        // juan.perez NOTACIÓN DE CORCHETES
+
+  La notación de corchetes nos permite poder pasar el nombre de la clave key no de forma literal sino a través de una variable que también pueda ir cambiando.
+
+  ejemplo:
+  const loveJSString = 'lovesJavascript';//variable declarada
+  nuevoUsuario[loveJSString] = true;//propiedad del elemento nuevoUsuario
+
