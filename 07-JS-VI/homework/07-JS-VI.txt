@@ -1,0 +1,22 @@
+* Funciones Callback
+
+Son funciones que tienen la capacidad de pasar como argumento otra función. Con un numero opcional de argumentos siempre el último, llamado 'cb' por convensión,
+llamamos a otras funciones que en su armado nos retornan algún valor.
+En el ejemplo, crearSaludo  es la  función con Callback, pasando en usuario el nombre 'Dan' y en 'cb' la función que queremos nos devuelva un saludo.
+
+ejemplo:
+function decirHolaAlUsuario(usuario) {
+    return 'Hola ' + usuario + '!';
+}
+
+function decirAdiosAlUsuario(usuario) {
+    return 'Adiós ' + usuario + '!';
+}
+
+function crearSaludo(usuario, cb) {
+    return cb(usuario);
+}
+
+crearSaludo('Dan', decirHolaAlUsuario); // 'Hola Dan!'
+crearSaludo('Dan', decirAdiosAlUsuario); // 'Adiós Dan!'
+
