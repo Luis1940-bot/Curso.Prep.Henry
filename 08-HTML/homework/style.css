@@ -1,0 +1,31 @@
+h1 {
+  color: blue;
+}
+
+img {
+  width: 400px;
+}
+
+#thirdDiv {
+  width: 600px;
+  height: 500px;
+  background-color: aqua;
+  padding: 50px;
+  border: 1;
+  border-style: dashed;
+}
+
+#spanId {
+  font-size: 18px;
+  margin: 50px;
+}
+body {
+  background-image: "416-800x600.jpg";
+}
+div {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  float: left;
+  float: right;
+}
