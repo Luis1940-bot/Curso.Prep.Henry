@@ -17,7 +17,7 @@ img {
 #thirdDiv {
   width: 600px;
   height: 500px;
-  background: aqua;
+  background: whitesmoke;
   padding: 50px;
   border: 1;
   border-style: dashed;
@@ -29,7 +29,8 @@ img {
   margin-top: 10px;
 }
 body {
-  background-image: "416-800x600.jpg";
+  background-image: url("416-800x600.jpg");
+  background-repeat: repeat-x;
 }
 div {
   margin-left: auto;
